@@ -72,4 +72,4 @@ The `monitor_network_traffic` function is the main function responsible for moni
 
 9. The loop continues indefinitely until the user interrupts it (usually by pressing `Ctrl + C`), in which case we catch the `KeyboardInterrupt` exception and print a message indicating that the monitoring has stopped.
 
-Again, please remember that this is a basic example meant for educational purposes, and a production-grade IDS/IPS would require more sophisticated techniques, handling of different protocols, and comprehensive security considerations.
+Again, please remember that this is a basic example meant as a personal project to learn how an IDS works. This is **NOT** a production-grade IDS/IPS  as that would require more sophisticated techniques, handling of different protocols, and comprehensive security considerations that can be provided by a threat feed for example, not using silly strings like I did which only work with an un-encrypted payload.
