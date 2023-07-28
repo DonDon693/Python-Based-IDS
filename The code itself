@@ -1,0 +1,37 @@
+import re
+
+# Define the regular expression pattern for the malicious string
+MALICIOUS_PATTERN = r"(malicious|string|pattern|1=1)"
+# 1=1 is used to mimic an SQL injection attack.
+
+def detect_malicious_payload(payload):
+    payload_lower = payload.lower()
+    match = re.search(MALICIOUS_PATTERN, payload_lower)
+
+    if match:
+        return True
+    else:
+        return False
+
+def monitor_network_traffic(interface="eth0"):
+    def receive_packet():
+        # Replace this with actual packet capture and extraction logic
+        return b"This is a normal payload."
+
+    print(f"Started monitoring network traffic on interface {interface}...")
+    try:
+        while True:
+            packet = receive_packet()
+            payload = packet.decode('utf-8', errors='ignore')
+
+            if detect_malicious_payload(payload):
+                print("Malicious pattern detected in the network traffic!")
+                # Implement your IPS action here, e.g., drop packet, alert, etc.
+            else:
+                print("Normal network traffic.")
+    except KeyboardInterrupt:
+        print("Stopped monitoring network traffic.")
+
+if __name__ == "__main__":
+    # Change "eth0" to the appropriate network interface you want to monitor
+    monitor_network_traffic(interface="eth0")
