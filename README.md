@@ -9,7 +9,7 @@ We start by importing the `re` module, which provides support for working with r
 ```python
 MALICIOUS_PATTERN = r"(malicious|string|pattern|1=1)"
 ```
-Here, we define the `MALICIOUS_PATTERN` variable as a regular expression string. The pattern `"(malicious|string|pattern|1=1)"` will match any occurrence of the words "malicious," "string," or "pattern," and also the specific string "1=1" which is infamously used in SQL injection attacks. You can modify this pattern to match other potential malicious strings.
+Here, we define the `MALICIOUS_PATTERN` variable as a regular expression string. The pattern `"(malicious|string|pattern|1=1)"` will match any occurrence of the words "malicious," "string," or "pattern," and also the specific string "1=1" which is infamously used in SQL injection attacks. You can modify this pattern to match other potential malicious strings, or in an even better case you can use a threat feed to help you define possible attacks however that is not in my tool shed at the moment so I simply put these strings here as an example.
 
 ```python
 def detect_malicious_payload(payload):
