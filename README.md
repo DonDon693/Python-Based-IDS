@@ -1,4 +1,4 @@
-# Python-Based INTRUSION DETECTION SYSTEM
+# Python-Based Intrusion Detection System Project
 Hello! I created an IDS using Python and although it's not exactly good in its creation I helped understand what an IDS is and does a whole lot more. I didn't use any threat feed I simply put a few strings it should look out for and that's considering nothing is encrypted so PLEASE DO NOT IMPLEMENT THIS AS YOUR IDS. Anyway here is a breakdown of my code which I used ChatGpt 3.5 for: 
 
 ```python
